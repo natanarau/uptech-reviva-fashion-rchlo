@@ -110,16 +110,16 @@ a {
 .product {
   display: grid;
   align-items: end;
-  border: solid 0.2rem #E5E5E5;
-  height: 29rem;
 }
 .product__img {
   justify-self: center;
+  width: 100%;
 }
 .name-product {
   font-size: 1.8rem;
   margin: 0.5rem 0;
-  text-transform: uppercase
+  height: 7rem;
+  text-transform: uppercase;
 }
 .value-product {
   font-size: 1.8rem;
@@ -276,17 +276,22 @@ a {
 .newsletter__input {
   width: 25rem;
   height: 3rem;
-  background-color: #E5E5E5;
+  background-color: #ffffff;
   border: solid 0.1rem #959595;
   margin: 0.8rem 0;
 }
 .newsletter__button {
+  font-family: 'Arboria', sans-serif;
   width: 14rem;
   height: 3rem;
-  background-color: #666666;
+  background-color: #000000;
   border: none;
   color: #ffffff;
   cursor: pointer;
+  transition: 0.3s;
+}
+.newsletter__button:hover {
+  opacity: 50%;
 }
 @media only screen and (max-width: 1190px) {
   .group-products {
