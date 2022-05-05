@@ -1,0 +1,8 @@
+.details__photos-min {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  .details__photos-min__img {
+    width: 100%;
+  }
+}
