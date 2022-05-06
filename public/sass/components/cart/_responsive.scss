@@ -1,0 +1,21 @@
+@media only screen and (max-width: 870px) {
+  .box-cart {
+    .box-cart__list-products {
+      .box-cart__product {
+        grid-template-columns: 1fr;
+      }
+    }
+  } 
+}
+@media only screen and (max-width: 1115px) {
+  .box-cart {
+    display: grid;
+  }
+  .box-cart__product {
+    justify-self: center;
+  }
+  .box-cart__img {
+    max-width: 50rem;
+
+  }
+}

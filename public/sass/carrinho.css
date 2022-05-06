@@ -1,0 +1,188 @@
+@font-face {
+  font-family: Arboria;
+  font-style: normal;
+  font-display: swap;
+  src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-medium.woff) format("woff");
+}
+
+.box-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.box-cart .box-cart__title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.box-cart .box-cart__desc {
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+.box-cart .box-cart__list-products {
+  display: -ms-grid;
+  display: grid;
+}
+
+.box-cart .box-cart__list-products .box-cart__product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr (1fr)[4];
+      grid-template-columns: 2fr 2fr repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.box-cart .box-cart__list-products .box-cart__product .box-cart__img {
+  width: 100%;
+}
+
+.box-cart .box-cart__list-products .box-cart__product .box-cart__value {
+  white-space: nowrap;
+}
+
+.box-cart .box-cart__list-products .box-cart__product .box-cart__qt .box-cart__input {
+  width: 5rem;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box-cart .box-cart__list-products .box-cart__product .box-cart__sub-total {
+  margin-right: 2rem;
+  white-space: nowrap;
+}
+
+.box-cart .box-cart__revis {
+  display: -ms-grid;
+  display: grid;
+  background-color: #ffe1e0;
+  text-align: center;
+  height: 100%;
+}
+
+.box-cart .box-cart__revis .box-cart__total {
+  margin: 2rem;
+}
+
+.box-cart .box-cart__revis .box-cart__total .box-cart__t {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.box-cart .box-cart__revis .box-cart__qt-bit {
+  margin: 1rem;
+}
+
+.box-cart .box-cart__revis .box-cart__desc {
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.box-cart .box-cart__revis .box-cart__button {
+  height: 5rem;
+  width: 20rem;
+  font-family: Arboria;
+  margin: 2rem auto;
+  border: solid 0.1rem #E5E5E5;
+  font-size: 1.6rem;
+  background-color: #70ff99;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.8rem 0.1rem #d4d4d4;
+          box-shadow: 0.1rem 0.1rem 0.8rem 0.1rem #d4d4d4;
+}
+
+.box-cart .box-cart__revis .box-cart__button:hover {
+  background-color: #01681e;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 870px) {
+  .details__grup-button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    margin-top: 5rem;
+  }
+}
+
+.details__grup-button {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr min-content;
+      grid-template-rows: 1fr -webkit-min-content;
+      grid-template-rows: 1fr min-content;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  grid-gap: 1rem;
+}
+
+.details__sizes {
+  display: -webkit-inline-flex;
+}
+
+.details__sizes .details__radios input[type=radio] {
+  all: unset;
+  position: absolute;
+}
+
+.details__label {
+  cursor: pointer;
+}
+
+.details__label .details__span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 0.1rem #E5E5E5;
+  font-size: 1.6rem;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.details__radios input[type=radio]:checked + .details__span {
+  background-color: #000000;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.details__button {
+  width: 25rem !important;
+}
+
+@media only screen and (max-width: 870px) {
+  .box-cart .box-cart__list-products .box-cart__product {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 1115px) {
+  .box-cart {
+    display: -ms-grid;
+    display: grid;
+  }
+  .box-cart__product {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .box-cart__img {
+    max-width: 50rem;
+  }
+}
+/*# sourceMappingURL=carrinho.css.map */

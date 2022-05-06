@@ -120,6 +120,10 @@ a {
   margin: 0.5rem 0;
   height: 10rem;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+.name-product:hover {
+  opacity: 50%;
 }
 .value-product {
   font-size: 1.8rem;
@@ -147,9 +151,6 @@ a {
 }
 .add:hover .add__content {
   transform: rotateY( 180deg );
-}
-.add__ok:target {
-  background-color: red;
 }
 .add__cart {
   position: absolute
@@ -259,7 +260,7 @@ a {
 }
 .footer-container {
   display: grid;
-  background-color: #F6F6F6;
+  background-color: #e8e8e8;
 }
 .footer-contact {
   display: grid;

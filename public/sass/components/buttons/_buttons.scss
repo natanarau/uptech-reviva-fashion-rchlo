@@ -1,0 +1,37 @@
+@import 'responsive';
+.details__grup-button {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  align-items: end;
+  grid-gap: 1rem;
+}
+.details__sizes {
+  display: -webkit-inline-flex;
+  .details__radios input[type=radio] {
+    all: unset;
+    position: absolute;
+  }
+}
+.details__label {
+  cursor: pointer;
+  .details__span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.1rem #E5E5E5;
+    font-size: 1.6rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+}
+.details__radios input[type=radio]:checked + .details__span{
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.details__button {
+  width: 25rem !important;
+}
+
+
