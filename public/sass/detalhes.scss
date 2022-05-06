@@ -1,8 +1,18 @@
-@import 'components/details-products/details';
-@import 'components/details-products/photo-lg';
-@import 'components/details-products/details-products';
-@import 'components/details-products/box-text';
-@import 'components/details-products/photo-min';
+@import 'components/products/details-products/details';
+@import 'components/products/details-products/details-products';
+@import 'components/products/details-products/photo-lg';
+@import 'components/products/details-products/box-text';
+@import 'components/products/details-products/photo-min';
+@import 'components/header/header';
+@import 'components/reset';
+@import 'components/category';
+@import 'components/menu/menu-header';
+@import 'components/container';
+@import 'components/search';
 @import 'components/buttons/buttons';
-@import 'components/details-products/responsive'
+@import 'components/products/products';
+@import 'components/card';
+@import 'components/blog/blog';
+@import 'components/footer/footer';
+@import 'components/response';
 

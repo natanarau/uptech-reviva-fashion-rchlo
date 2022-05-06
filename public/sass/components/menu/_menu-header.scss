@@ -1,0 +1,26 @@
+.menu {
+  background-color: #eaeaea;
+}
+.menu__button {
+  display: none;
+}
+.menu__ul {
+  display: flex;
+  height: 5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  .menu__li {
+    font-size: 1.4rem;
+    list-style: none;
+    transition: 0.3s;
+    margin: 2rem;
+    .menu__link {
+      text-transform: uppercase;
+    }
+  }
+  .menu__li:hover {
+    opacity: 50%;
+  }
+}
+
+
