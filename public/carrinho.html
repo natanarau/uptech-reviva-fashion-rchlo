@@ -78,25 +78,26 @@
 
           <div class="box-cart__value">
             <h3 class="box-cart__title">Valor</h3>
-            <span class="box-cart__desc">R$ 259,90</span>
+            <div class="box-cart__desc">R$ <span class="value-product">259,90</span></div>
           </div>
 
           <div class="box-cart__qt">
             <h3 class="box-cart__title">Quantidade</h3>
-            <input class="box-cart__input" type="number" name="qt" min="1" max="99">
+            <input class="box-cart__input" value="1" type="number" name="qt" min="1" max="99">
           </div>
 
           <div class="box-cart__sub-total">
             <h3 class="box-cart__title">Subtotal</h3>
-            <span class="box-cart__desc">R$ 259,90</span>
+            <div class="box-cart__desc">R$ <span class="subTotal">259,90</span></div>
           </div>
+
         </div>
         <div class="box-cart__product">
-          <img class="box-cart__img" src="https://static.riachuelo.com.br/RCHLO/14595150003/portrait/47b6bc1baa2696ab9e414de591d2ccaf96f2d25b.jpg?imwidth=700" alt="Foto Vestido Midi Plus Size Feminino Aberto Uma Maria Liso Marrom Filipa by Riachuelo, clique para ampliar">
+          <img class="box-cart__img" src="https://static.riachuelo.com.br/RCHLO/14594536001/portrait/be75e5ca6a3968d5bb5701efaab75e45e14ff015.jpg?imwidth=700" alt="Foto Vestido Midi Plus Size Feminino Aberto Uma Maria Liso Marrom Filipa by Riachuelo, clique para ampliar">
 
           <div class="box-cart__name">
             <h3 class="box-cart__title">Produto</h3>
-            <span class="box-cart__desc">VESTIDO MIDI PLUS SIZE FEMININO ABERTO UMA MARIA LISO MARROM FILIPA BY RIACHUELO</span>
+            <span class="box-cart__desc">CAMISERA FEMININA MANGA CURTA FREE FIRE BRANCO</span>
           </div>
 
           <div class="box-cart__size">
@@ -125,33 +126,28 @@
 
           <div class="box-cart__value">
             <h3 class="box-cart__title">Valor</h3>
-            <span class="box-cart__desc">R$ 259,90</span>
+            <div class="box-cart__desc">R$ 259,90<span class="value-product">259,90</span></div>
           </div>
 
           <div class="box-cart__qt">
             <h3 class="box-cart__title">Quantidade</h3>
-            <input class="box-cart__input" type="number" name="qt" min="1" max="99">
+            <input class="box-cart__input" value="1" type="number" name="qt" min="1" max="99">
           </div>
 
           <div class="box-cart__sub-total">
             <h3 class="box-cart__title">Subtotal</h3>
-            <span class="box-cart__desc">R$ 259,90</span>
+            <div class="box-cart__desc">R$ <span class="subTotal">259,90</span></div>
           </div>
         </div>
       </div>
 
       <div class="box-cart__revis">
         <div class="box-cart__total">
-          <span class="box-cart__t">Total: R$ 519,80</span>
-        </div>
-        <div class="box-cart__qt-bit">
-          <span class="box-cart__desc">1 x R$ 259,90 = R$ 259,90</span>
-        </div>
-        <div class="box-cart__qt-bit">
-          <span class="box-cart__desc">1 x R$ 259,90 = R$ 259,90</span>
+          <div class="box-cart__t">Total: R$ <span id="total"></span></div>
         </div>
         <button class="box-cart__button">Ir para o pagamento</button>
       </div>
+
     </div>
   </main>
   <footer class="footer-container">
@@ -199,6 +195,7 @@
     </div>
   </footer>
   <script src="js/functions.js"></script>
+  <script src="js/total-carrinho.js"></script>
 </body>
 
 </html>
