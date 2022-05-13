@@ -4,4 +4,4 @@ const inicialValue = 0;
 const sumValue = carrinho.reduce((a, b) => a + b, inicialValue);
 
 const subTotal = sumValue.toFixed(2).replace('.', ',');
-document.querySelector('#total').innerHTML = subTotal;
+console.log(subTotal);
