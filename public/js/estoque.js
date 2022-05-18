@@ -139,3 +139,23 @@ if (localStorage.length === 0) {
 } else {
   console.log('Existe produto ainda em localStorage');
 }
+
+const addCart = document.querySelectorAll('.add');
+
+[...addCart].map((value, index) => {
+  // MAP DE TODOS OS BOTÕES ADD
+  value.addEventListener('click', (event) => {
+    const teste = JSON.parse(localStorage.getItem(value.id));
+    if (teste.quantidade_disponivel <= 0) {
+      console.log('Produto não disponível');
+    } else {
+      const availableQuantity = JSON.parse(localStorage.getItem(value.id));
+      const refreshQuantity = availableQuantity.quantidade_disponivel - 1;
+      estoque[index].quantidade_disponivel = refreshQuantity; // ATUALIZANDO A QUANTIDADE DO OBJ
+      localStorage.setItem(value.id, JSON.stringify(estoque[index])); // ENVIADO OBJ ATUALIZADO PARA MEMORIA
+      console.log(
+        `Produto: ${availableQuantity.nome}, Quantidade atual: ${availableQuantity.quantidade_disponivel} `,
+      );
+    }
+  });
+});
