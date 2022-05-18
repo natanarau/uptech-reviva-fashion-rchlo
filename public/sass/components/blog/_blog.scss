@@ -1,0 +1,23 @@
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  margin-bottom: 3rem;
+}
+.blog__p {
+  font-size: 2rem;
+}
+.blog__img {
+  width: 100%;
+}
+.blog-master {
+  max-width: 60rem;
+}
+.blog-master__img {
+  width: 100%;
+}
+.blog-min {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}

@@ -1,0 +1,35 @@
+.group-products {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 5rem;
+}
+
+.product {
+  display: grid;
+  align-items: end;
+}
+.product__img {
+  justify-self: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.name-product {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  height: 10rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.name-product:hover {
+  opacity: 50%;
+}
+.value-product {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #D0403A;
+}
+.detail-add {
+  display: grid;
+}

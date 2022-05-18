@@ -1,0 +1,15 @@
+@import '../logo/logo';
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 6rem;
+  align-items: center;
+  .container-title {
+    display: grid;
+  }
+  .header__img {
+    width: 3.5rem
+  }
+}
+
+

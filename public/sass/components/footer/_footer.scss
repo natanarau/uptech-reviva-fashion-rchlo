@@ -1,0 +1,57 @@
+@import '../logo/logo';
+.footer-container {
+  display: grid;
+  background-color: #e8e8e8;
+}
+.footer-contact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  justify-content: space-between;
+  margin: 0 3.5rem 3.5rem 3.5rem;
+}
+.container-title-footer {
+  display: grid;
+  justify-content: start;
+  margin: 3.5rem;
+}
+.container-title-footer__span {
+  justify-self: end;
+  font-size: 1.2rem;
+}
+.footer-contact__li {
+  font-size: 1.7rem;
+  margin: 0.8rem 0;
+  list-style: none;
+}
+.redes {
+  display: flex;
+}
+.redes__img {
+  width: 3rem;
+  margin: 1rem 1rem 1rem 0;
+}
+.contact__img {
+  width: 2rem;
+  vertical-align: sub;
+}
+.newsletter__input {
+  width: 25rem;
+  height: 3rem;
+  background-color: #ffffff;
+  border: solid 0.1rem #959595;
+  margin: 0.8rem 0;
+}
+.newsletter__button {
+  font-family: 'Arboria', sans-serif;
+  width: 14rem;
+  height: 3rem;
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.newsletter__button:hover {
+  opacity: 50%;
+}

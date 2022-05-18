@@ -1,0 +1,11 @@
+.details__box-text {
+  display: grid;
+  grid-template-rows: min-content;
+  .details__title {
+    margin-bottom: 1rem;
+  }
+  .details__description {
+    font-size: 1.5rem;
+  }
+}
+

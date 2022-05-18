@@ -1,0 +1,32 @@
+.card {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  height: 15rem;
+  background-color: #70ffed;
+  margin: 5rem 0;
+  padding: 0.5rem;
+}
+.description-card {
+  display: grid;
+  justify-content: center;
+  align-content: end;
+}
+.description-card__desc {
+  font-size: 2rem;
+}
+.description-card__manual {
+  letter-spacing: 0.86rem;
+  font-size: 2.4rem;
+}
+.card-title {
+  display: grid;
+  justify-self: end;
+}
+.title-manual {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.card-title__span {
+  font-size: 1.2rem;
+  justify-self: end;
+}
