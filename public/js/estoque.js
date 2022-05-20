@@ -4,6 +4,7 @@ const estoque = [
     nome: 'VESTIDO MIDI PLUS SIZE FEMININO ABERTO UMA MARIA LISO MARROM FILIPA BY RIACHUELO',
     url: 'vestido-midi-plus-size-feminino-aberto-uma-maria-liso-marrom-filipa-by-riachuelo',
     preco: 259.9,
+    categoria: 1,
     descricao:
       'O Vestido Midi Plus Size Feminino Aberto Uma Maria Liso Marrom Filipa by Riachuelo foi confeccionado em malha macia, uma ótima escolha para quem está em busca de conforto e segurança. Além de contar com mangas 3/4 e abertura frontal por botões . Perfeito para usar na suas ocasiões preferidas ou usar no dia a dia. Aposte!',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -20,6 +21,7 @@ const estoque = [
     nome: 'Camiseta Manga Curta Free Fire Branco',
     url: 'camiseta-feminina-manga-curta-free-fire-branco',
     preco: 79.9,
+    categoria: 1,
     descricao:
       'A Camiseta Manga Curta Free Fire Branco é produzida em fibra natural, sendo muito macia e confortável. Com modelagem regular, o diferencial da peça é a estampa temática do jogo Free Fire. As peças estampadas são sempre uma boa escolha na hora de compor um look mais despojado. Aposte!',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -36,6 +38,7 @@ const estoque = [
     nome: 'Suéter Feminino Curto Tricot Liso Verde Pool Basics by Riachuelo',
     url: 'sueter-feminino-curto-tricot-liso-verde-pool-basics-by-riachuelo',
     preco: 99.9,
+    categoria: 1,
     descricao:
       'O Suéter Feminino Curto Tricot Liso Verde Pool Basics by Riachuelo, confeccionado em tricot, ideal para os dias mais frios. Possui modelo fechado e mangas longas. Perfeito para os dias de temperatura baixa, use sobre regatas e combine com calças de fit ajustado e sapatilhas.',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -52,6 +55,7 @@ const estoque = [
     nome: 'Blusa Feminina Manga Longa Texturizada Branco AK by Riachuelo',
     url: 'blusa-feminina-manga-longa-texturizada-branco-ak-by-riachuelo',
     preco: 69.9,
+    categoria: 1,
     descricao:
       'A Blusa Feminina Manga Longa Texturizada Branco AK by Riachuelo vai se tornar sua peça preferida! Confeccionada em malha texturizada, a peça é super versátil, agregando estilo e conforto ao seu closet!',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -68,6 +72,7 @@ const estoque = [
     nome: 'Bermuda Água Masculina Tactel Verão Rosa Antigo Pool by Riachuelo',
     url: 'bermuda-agua-masculina-tactel-ver-o-rosa-antigo-pool-by-riachuelo',
     preco: 39.9,
+    categoria: 2,
     descricao:
       'Básica e casual, a Bermuda Água Masculina Tactel Verão Rosa Antigo Pool by Riachuelo é o toque de estilo ao seu look praia. Confeccionada em tactel, possui uma estilosa estampa com temática de verão, dando o toque despojado que seu look de praia precisa! Aposte em uma regata e chinelos slides para um look confortável!',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -84,6 +89,7 @@ const estoque = [
     nome: 'Maiô Tradicional Verão Azul Turquesa Dript by Riachuelo',
     url: 'maio-tradicional-ver-o-azul-turquesa-dript-by-riachuelo',
     preco: 99.9,
+    categoria: 2,
     descricao:
       'Confeccionado em malha macia, o Maiô Tradicional Verão Azul Turquesa Dript by Riachuelo é uma ótima pedida para curtir os momentos de lazer na praia ou piscina. Com modelagem tradicional, apresenta estampa frontal e alças com regulagem. Combine com um saída de praia para os melhores dias de sol.',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -100,6 +106,7 @@ const estoque = [
     nome: 'Regata Masculina Malha Verão Branco Pool by Riachuelo',
     url: 'regata-masculina-malha-ver-o-branco-pool-by-riachuelo',
     preco: 49.9,
+    categoria: 2,
     descricao:
       'A Regata Masculina Malha Verão Branco Pool by Riachuelo é produzida em fibra natural, sendo muito macia e confortável. Com modelagem regular, o diferencial da peça é a padronagem com temática de verão. As peças estampadas são sempre uma boa escolha na hora de compor um look mais despojado. Aposte! Combine com uma bermuda de sarja e tênis para um visual casual.',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -116,6 +123,7 @@ const estoque = [
     nome: 'Camiseta Masculina Manga Curta Summer Addict Rosa Salmão Pool by Riachuelo',
     url: 'camiseta-masculina-manga-curta-summer-addict-rosa-salm-o-pool-by-riachuelo',
     preco: 59.9,
+    categoria: 2,
     descricao:
       'A Camiseta Masculina Manga Curta Summer Addict Rosa Salmão Pool by Riachuelo é produzida em fibra natural, sendo muito macia e confortável. Com modelagem regular, a peça possui estampa em lettering. As peças estampadas são sempre uma boa escolha na hora de compor um look mais despojado. Aposte! Combine com uma bermuda de sarja e tênis para um visual casual.',
     tamanhos_disponiveis: ['P', 'M', 'G'],
@@ -141,20 +149,21 @@ if (localStorage.length === 0) {
 }
 
 const addCart = document.querySelectorAll('.add');
-
 [...addCart].map((value, index) => {
   // MAP DE TODOS OS BOTÕES ADD
+  console.log(value.id, 'ID botão', estoque[index].id, 'id Produto');
   value.addEventListener('click', (event) => {
-    const teste = JSON.parse(localStorage.getItem(value.id));
-    if (teste.quantidade_disponivel <= 0) {
+    const idProduct = JSON.parse(localStorage.getItem(value.id));
+    if (idProduct.quantidade_disponivel <= 0) {
       console.log('Produto não disponível');
     } else {
       const availableQuantity = JSON.parse(localStorage.getItem(value.id));
       const refreshQuantity = availableQuantity.quantidade_disponivel - 1;
       estoque[index].quantidade_disponivel = refreshQuantity; // ATUALIZANDO A QUANTIDADE DO OBJ
+
       localStorage.setItem(value.id, JSON.stringify(estoque[index])); // ENVIADO OBJ ATUALIZADO PARA MEMORIA
       console.log(
-        `Produto: ${availableQuantity.nome}, Quantidade atual: ${availableQuantity.quantidade_disponivel} `,
+        ` ID do botão ${value.id} ID do produto ${availableQuantity.id} Produto: ${availableQuantity.nome}, Quantidade atual: ${availableQuantity.quantidade_disponivel} `,
       );
     }
   });
