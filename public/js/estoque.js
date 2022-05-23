@@ -136,7 +136,6 @@ const estoque = [
     ],
   },
 ];
-
 if (localStorage.length === 0) {
   // VERIFICAR SE EXISTE ALGO SALGO NO LOCALSTORAGE
   estoque.map((value) => {
@@ -147,24 +146,18 @@ if (localStorage.length === 0) {
 } else {
   console.log('Existe produto ainda em localStorage');
 }
-
 const addCart = document.querySelectorAll('.add');
-[...addCart].map((value, index) => {
-  // MAP DE TODOS OS BOTÕES ADD
-  console.log(value.id, 'ID botão', estoque[index].id, 'id Produto');
-  value.addEventListener('click', (event) => {
-    const idProduct = JSON.parse(localStorage.getItem(value.id));
-    if (idProduct.quantidade_disponivel <= 0) {
+[...addCart].map((value) => {
+  value.addEventListener('click', () => {
+    const item = JSON.parse(localStorage.getItem(value.id));
+    if (item.quantidade_disponivel <= 0) {
       console.log('Produto não disponível');
     } else {
-      const availableQuantity = JSON.parse(localStorage.getItem(value.id));
-      const refreshQuantity = availableQuantity.quantidade_disponivel - 1;
-      estoque[index].quantidade_disponivel = refreshQuantity; // ATUALIZANDO A QUANTIDADE DO OBJ
-
-      localStorage.setItem(value.id, JSON.stringify(estoque[index])); // ENVIADO OBJ ATUALIZADO PARA MEMORIA
-      console.log(
-        ` ID do botão ${value.id} ID do produto ${availableQuantity.id} Produto: ${availableQuantity.nome}, Quantidade atual: ${availableQuantity.quantidade_disponivel} `,
+      const availableQuantityProduct = JSON.parse(
+        localStorage.getItem(value.id),
       );
+      availableQuantityProduct.quantidade_disponivel -= 1;
+      localStorage.setItem(value.id, JSON.stringify(availableQuantityProduct));
     }
   });
 });
