@@ -323,8 +323,7 @@ a {
 }
 
 .box-cart .box-cart__revis {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   background-color: #ffe1e0;
   text-align: center;
   height: 100%;
@@ -366,6 +365,11 @@ a {
 .box-cart .box-cart__revis .box-cart__button:hover {
   background-color: #01681e;
   color: #ffffff;
+}
+
+.box-cart .total-flex {
+  display: -ms-grid;
+  display: grid;
 }
 
 .by {
