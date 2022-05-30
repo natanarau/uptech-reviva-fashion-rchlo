@@ -204,47 +204,6 @@ a {
   width: 25rem !important;
 }
 
-.group-products {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 5rem;
-}
-
-.product {
-  display: grid;
-  align-items: end;
-}
-
-.product__img {
-  justify-self: center;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.name-product {
-  font-size: 1.8rem;
-  margin: 0.5rem 0;
-  height: 10rem;
-  text-transform: uppercase;
-  transition: 0.3s;
-}
-
-.name-product:hover {
-  opacity: 50%;
-}
-
-.value-product {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0.5rem 0;
-  color: #D0403A;
-}
-
-.detail-add {
-  display: grid;
-}
-
 .category {
   margin: 1.5rem 0;
   letter-spacing: 1.7px;
@@ -252,72 +211,87 @@ a {
   color: #261E1E;
 }
 
-.card {
+@font-face {
+  font-family: Arboria;
+  font-style: normal;
+  font-display: swap;
+  src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-medium.woff) format("woff");
+}
+.box-cart {
+  display: flex;
+  margin: 1rem 0;
+}
+.box-cart .box-cart__title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.box-cart .box-cart__desc {
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+.box-cart .box-cart__list-products {
   display: grid;
-  grid-template-rows: 2fr 1fr;
-  height: 15rem;
-  background-color: #70ffed;
-  margin: 5rem 0;
-  padding: 0.5rem;
 }
-
-.description-card {
+.box-cart .box-cart__list-products .box-cart__product {
   display: grid;
-  justify-content: center;
-  align-content: end;
+  grid-template-columns: 2fr 2fr repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
 }
-
-.description-card__desc {
-  font-size: 2rem;
-}
-
-.description-card__manual {
-  letter-spacing: 0.86rem;
-  font-size: 2.4rem;
-}
-
-.card-title {
-  display: grid;
-  justify-self: end;
-}
-
-.title-manual {
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-.card-title__span {
-  font-size: 1.2rem;
-  justify-self: end;
-}
-
-.blog {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.blog__p {
-  font-size: 2rem;
-}
-
-.blog__img {
+.box-cart .box-cart__list-products .box-cart__product .box-cart__img {
   width: 100%;
 }
-
-.blog-master {
-  max-width: 60rem;
+.box-cart .box-cart__list-products .box-cart__product .box-cart__value {
+  white-space: nowrap;
 }
-
-.blog-master__img {
-  width: 100%;
+.box-cart .box-cart__list-products .box-cart__product .box-cart__qt .box-cart__input {
+  width: 5rem;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
-
-.blog-min {
+.box-cart .box-cart__list-products .box-cart__product .box-cart__sub-total {
+  margin-right: 2rem;
+  white-space: nowrap;
+}
+.box-cart .box-cart__revis {
+  display: none;
+  background-color: #ffe1e0;
+  text-align: center;
+  height: 100%;
+}
+.box-cart .box-cart__revis .box-cart__total {
+  margin: 2rem;
+}
+.box-cart .box-cart__revis .box-cart__total .box-cart__t {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+.box-cart .box-cart__revis .box-cart__qt-bit {
+  margin: 1rem;
+}
+.box-cart .box-cart__revis .box-cart__desc {
+  font-size: 2rem;
+  white-space: nowrap;
+}
+.box-cart .box-cart__revis .box-cart__button {
+  height: 5rem;
+  width: 20rem;
+  font-family: Arboria;
+  margin: 2rem auto;
+  border: solid 0.1rem #E5E5E5;
+  font-size: 1.6rem;
+  background-color: #70ff99;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0.1rem 0.1rem 0.8rem 0.1rem #d4d4d4;
+}
+.box-cart .box-cart__revis .box-cart__button:hover {
+  background-color: #01681e;
+  color: #ffffff;
+}
+.box-cart .total-flex {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
 }
 
 .by {
@@ -542,22 +516,5 @@ a {
     grid-template-columns: 1fr;
   }
 }
-.alert {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  height: 5rem;
-  top: 0;
-  text-align: center;
-  color: #0c4001;
-  background-color: #91db81;
-  font-size: 2rem;
-}
 
-.alert-flex {
-  display: flex;
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=carrinho.css.map */
