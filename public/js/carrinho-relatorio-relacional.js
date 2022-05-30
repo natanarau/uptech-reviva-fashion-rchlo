@@ -21,7 +21,7 @@ const productShortsTotal = [];
 const jeans = produtos.filter((props) => props.includes('Jeans'));
 const productJeansTotal = [];
 const filtering = produtos.map((product, indexProduct) => {
-    productDivided.push({ id: indexProduct, nameProduct: product });
+    productDivided.push({ id: indexProduct, nameProduct: product, valueProduct: 0 });
 });
 const filterTotal = precos.map((value, indexValue) => {
     if (productDivided[indexValue].id === indexValue) {
