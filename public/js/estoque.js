@@ -1,4 +1,3 @@
-"use strict";
 const estoque = [
     {
         id: 1,
@@ -46,6 +45,7 @@ const estoque = [
         tamanhos_disponiveis: ['P', 'M', 'G'],
         quantidade_disponivel: 13,
         carrinho: 0,
+        total: 0,
         imagens: [
             {
                 url: 'https://static.riachuelo.com.br/RCHLO/14380226005/portrait/14ed05dd6b3dd0307140279eb7f538725d368e9a.jpg?imwidth=700',
@@ -176,3 +176,4 @@ const addCart = document.querySelectorAll('.add');
         }
     });
 });
+export {};
