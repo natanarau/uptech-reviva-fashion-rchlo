@@ -1,43 +1,43 @@
 // TODOS OS ITENS DE CAMISETA ESTÃO COM 10% DE DESCONTO
 // NA COMPRA DO 2º ITEM DO MESMO VALOR A SEGUNDA RECEBE MAIS 5% DE DESCONTO TOTALIZANDO 15% NO SEGUNDO
-// TODOS OS ITENS QUE SÃO JEANS TEM UMA TAXA DE 3,99 POR PEÇA
-const produtos = [
+// TODOS OS ITENS QUE SÃO jean TEM UMA TAXA DE 3,99 POR PEÇA
+const products:string[] = [
   'Camiseta Básica',
   'Camiseta Polo',
   'Bermuda Moletom',
-  'Calça Jeans Masculina',
+  'Calça jeans Masculina',
   'Camiseta Básica',
-  'Calça Jeans Feminina',
+  'Calça jeans Feminina',
   'Camiseta Básica',
 ];
 
-const precos = [29.9, 49.9, 35, 89.99, 29.9, 109.99, 29.9];
+const pricesProducts = [29.9, 49.9, 35, 89.99, 29.9, 109.99, 29.9];
 const porcentage = 0.9;
 const porcentage2part = 0.95;
-const calculator = (acc, valueCurrent) => acc + valueCurrent;
+const calculato = (acc: any, valueCurrent: any) => acc + valueCurrent;
 
-const withDiscount = [];
-const productsWithoutDiscounts = [];
-const valueDiscounts = [];
-const productsDiscount2part = [];
+const withDiscount: number[] = [];
+const productsWithoutDiscounts: number[] = [];
+const valueDiscounts: number[] = [];
+const productsDiscount2part: number[] = [];
 
-const regularPrice = [];
-const valueRegularPrice = [];
+const regularPrice: number[] = [];
+const valueRegularPrice: number[] = [];
 
-const withFee = [];
-const valueWithFee = [];
+const withFee: number[] = [];
+const valueWithFee: number[] = [];
 
-const shirt = produtos.filter((props) => props.includes('Camiseta'));
-const shorts = produtos.filter((props) => props.includes('Bermuda'));
-const jeans = produtos.filter((props) => props.includes('Jeans'));
+const shirt = products.filter((props) => props.includes('Camiseta'));
+const short = products.filter((props) => props.includes('Bermuda'));
+const jean = products.filter((props) => props.includes('jean'));
 
-const handleProductsShirt = produtos.map((nameProduct, indexName) => {
+const handleProductsShirt = products.map((nameProduct, indexName) => {
   if (shirt.includes(nameProduct)) {
     withDiscount.push(indexName);
   }
 });
 
-const handlePrice = precos.map((value, indexValue) => {
+const handlePrice = pricesProducts.map((value, indexValue) => {
   if (withDiscount.includes(indexValue)) {
     productsWithoutDiscounts.push(value);
     valueDiscounts.push(value * porcentage);
@@ -56,42 +56,42 @@ const handle2part = valueDiscounts.map((value, index) => {
   }
   return value;
 });
-const partDiscount = productsDiscount2part * porcentage2part;
+const partDiscount = +productsDiscount2part * porcentage2part;
 console.log(partDiscount, 'valor da 2° camisa do mesmo modelo com MAIS 5%');
 
 const valueTotalShirt =
-  valueDiscounts.reduce(calculator, 0) - productsDiscount2part + partDiscount;
+  valueDiscounts.reduce(calculato, 0) - +productsDiscount2part + partDiscount;
 console.log(valueTotalShirt, 'Valor total das camisas a serem pagas');
 
-const handleProductsShorts = produtos.map((nameProduct, indexName) => {
-  if (shorts.includes(nameProduct)) {
+const handleProductsshort = products.map((nameProduct, indexName) => {
+  if (short.includes(nameProduct)) {
     regularPrice.push(indexName);
   }
 });
 
-const handlePriceShorts = precos.map((value, valueIndex) => {
+const handlePriceshort = pricesProducts.map((value, valueIndex) => {
   if (regularPrice.includes(valueIndex)) {
     valueRegularPrice.push(value);
   }
 });
-const valueShorts = valueRegularPrice.reduce(calculator, 0);
-console.log(valueShorts, 'Valor Bermuda');
+const valueshort = valueRegularPrice.reduce(calculato, 0);
+console.log(valueshort, 'Valor Bermuda');
 
-const handleProductsJeans = produtos.map((nameProduct, indexName) => {
-  if (jeans.includes(nameProduct)) {
+const handleProductsjean = products.map((nameProduct, indexName) => {
+  if (jean.includes(nameProduct)) {
     withFee.push(indexName);
   }
 });
 
-const handlePriceJeans = precos.map((value, indexName) => {
+const handlePricejean = pricesProducts.map((value, indexName) => {
   if (withFee.includes(indexName)) {
     valueWithFee.push(value + 3.99);
   }
 });
-const totalValueJeans = valueWithFee.reduce(calculator, 0);
-console.log(totalValueJeans, 'Valor dos Jens');
+const totalValuejean = valueWithFee.reduce(calculato, 0);
+console.log(totalValuejean, 'Valor dos Jens');
 
 console.log(
-  valueTotalShirt + totalValueJeans + valueShorts,
+  valueTotalShirt + totalValuejean + valueshort,
   'Valor total a Pagar',
 );

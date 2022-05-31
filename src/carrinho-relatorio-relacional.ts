@@ -1,6 +1,12 @@
 // Exemplo: Produto: Camiseta Básica, Quantidade: 3, Valor Unitário: R$ 29,90
 // Exemplo: Produto: Calça Jeans Masculina, Quantidade: 1, Valor Unitário: R$ 89,99
 
+interface poductTypes {
+  id: number;
+  nameProduct: string;
+  valueProduct: number
+}
+
 const produtos = [
   'Camiseta Básica',
   'Camiseta Polo',
@@ -10,23 +16,23 @@ const produtos = [
   'Calça Jeans Feminina',
   'Camiseta Básica',
 ];
-const productDivided = [];
+const productDivided: poductTypes[] = [];
 const precos = [29.9, 49.9, 35, 89.99, 29.9, 109.99, 29.9];
 
 const shirtBasic = produtos.filter((props) => props.includes('Básica'));
-const productShirtBasicTotal = [];
+const productShirtBasicTotal: any[] = [];
 
 const shirtPolo = produtos.filter((props) => props.includes('Polo'));
-const productShirtPoloTotal = [];
+const productShirtPoloTotal: any[] = [];
 
 const shorts = produtos.filter((props) => props.includes('Bermuda'));
-const productShortsTotal = [];
+const productShortsTotal: any[] = [];
 
 const jeans = produtos.filter((props) => props.includes('Jeans'));
-const productJeansTotal = [];
+const productJeansTotal: any[] = [];
 
 const filtering = produtos.map((product, indexProduct) => {
-  productDivided.push({ id: indexProduct, nameProduct: product });
+  productDivided.push({ id: indexProduct, nameProduct: product, valueProduct: 0 });
 });
 
 const filterTotal = precos.map((value, indexValue) => {

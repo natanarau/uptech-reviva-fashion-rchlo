@@ -1,7 +1,7 @@
 const carrinho = [25.99, 27.83, 35.8, 35.8, 35.8, 44, 53.9, 25.99];
 const discount = 0.9;
-const productDiscount = [];
-const calculator = (acc, valueCurrent) => acc + valueCurrent;
+const productDiscount: number[] = [];
+const calculator = (acc: number, valueCurrent: number) => acc + valueCurrent;
 
 const noDiscount = carrinho
   .map((valueProduct, indexCurrent) => {

@@ -1,17 +1,18 @@
 interface ProductImage {
   url: string;
-  description: string;
+  descricao: string;
 }
 
 export interface ProductTypes {
-  id: number;
-  name: string;
+  id: any;
+  nome: string;
   url: string;
-  price: number;
-  category: number;
-  description: string;
-  images: ProductImage[];
-  quantity_available: number;
-  cart: number;
-  total: number
+  preco: number;
+  categoria: number;
+  descricao: string;
+  tamanhos_disponiveis: any;
+  quantidade_disponivel: number;
+  carrinho: number;
+  total: number;
+  imagens: ProductImage[];
 }
